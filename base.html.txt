@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General FAQs</title>
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/page_title.css">
+<link rel="stylesheet" href="css/faq_item.css">
+<link rel="stylesheet" href="css/scroll_top.css">
+</head>
+<body>
+
+<div>
+  <div data-include="blocks/page_title.html"></div>
+  <div data-include="blocks/faq_accordion.html"></div>
+</div>
+
+<div data-include="blocks/scroll_top.html"></div>
+
+<script src="scripts/include.js"></script>
+<script>
+  includeBlocks().then(() => {
+    const s1 = document.createElement('script');
+    s1.src = 'scripts/faq_accordion.js';
+    document.body.appendChild(s1);
+
+    const s2 = document.createElement('script');
+    s2.src = 'scripts/scroll_top.js';
+    document.body.appendChild(s2);
+  });
+</script>
+
+</body>
+</html>
